@@ -10,9 +10,9 @@ namespace Multiples
     {
         static void Main(string[] args)
         {
-            //Console.WriteLine(Multiples(1000));
+            Console.WriteLine(Multiples(1000));
 
-            Fibonacci(4000000);
+            //Fibonacci(4000000);
             Console.ReadLine();
         }
 
