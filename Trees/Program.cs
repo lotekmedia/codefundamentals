@@ -3,9 +3,15 @@ using System.Collections.Generic;
 using System.Text;
 namespace TreeSort
 {
+    public class Trade
+    {
+        public DateTime Time;
+        public int Price;
+    }
+
     class Node
     {
-        public int item;
+        public Trade item;
         public Node leftc;
         public Node rightc;
         public override string ToString()
@@ -16,10 +22,12 @@ namespace TreeSort
         public void display()
         {
             Console.Write("[");
-            Console.Write(item);
+            Console.Write(item.Time.ToShortTimeString() + " " + item.Price.ToString());
             Console.Write("]");
+            Console.WriteLine();
         }
     }
+
     class Tree
     {
         public Node root;
@@ -31,10 +39,10 @@ namespace TreeSort
         {
             return root;
         }
-        public void Insert(int id)
+        public void Insert(Trade trade)
         {
             Node newNode = new Node();
-            newNode.item = id;
+            newNode.item = trade;
             if (root == null)
                 root = newNode;
             else
@@ -44,7 +52,7 @@ namespace TreeSort
                 while (true)
                 {
                     parent = current;
-                    if (id < current.item)
+                    if (trade.Price < current.item.Price)
                     {
                         current = current.leftc;
                         if (current == null)
@@ -65,6 +73,7 @@ namespace TreeSort
                 }
             }
         }
+
         public void Preorder(Node Root)
         {
             if (Root != null)
@@ -104,16 +113,8 @@ namespace TreeSort
             {
                 return;
             }
-            //for (int i = 0; i < children.Count() - 1; i++)
-            //{
-            //    children[i].print(prefix + (isTail ? "    " : "│   "), false);
-            //}
-            //if (children.Count() > 0)
-            //{
-            //    children[children.Count() - 1].print(prefix + (isTail ? "    " : "│   "), true);
-            //}
             print(prefix + (isTail ? "    " : "│   "), curNode.leftc == null, curNode.leftc);
-            Console.WriteLine(prefix + (isTail ? "   " : "├── ") + curNode.ToString());
+            Console.WriteLine(prefix + (isTail ? "   " : "├── ") + curNode.item.Price.ToString());
             print(prefix + (isTail ? "    " : "│   "), curNode.rightc == null, curNode.rightc); 
             
             
@@ -128,7 +129,8 @@ namespace TreeSort
             Random r = new Random(DateTime.Now.Millisecond);
             for (int i = 0; i < 20; i++)
             {
-                theTree.Insert(r.Next(1,100));
+                Trade t = new Trade() { Price = r.Next(1, 100), Time = DateTime.Now };
+                theTree.Insert(t);
             }
             //theTree.Insert(20);
             //theTree.Insert(25);
