@@ -1,6 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace TreeTests
+{
+    [TestClass]
+    public class TestTree
+    {
+
+        [TestMethod]
+        public void InOrderTest()
+        {
+            
+        }
+    }
+}
+
 namespace TreeSort
 {
     public class Trade
@@ -121,6 +137,7 @@ namespace TreeSort
         }
 
     }
+
     class Program
     {
         static void Main(string[] args)
@@ -144,15 +161,24 @@ namespace TreeSort
             //theTree.Insert(99);
             //theTree.Insert(91);
             Console.WriteLine("Inorder Traversal : ");
+            DateTime start = DateTime.Now;
             theTree.Inorder(theTree.ReturnRoot());
+            DateTime end = DateTime.Now;
+            Console.WriteLine(end - start);
             Console.WriteLine(" ");
             Console.WriteLine();
             Console.WriteLine("Preorder Traversal : ");
+            start = DateTime.Now;
             theTree.Preorder(theTree.ReturnRoot());
+            end = DateTime.Now;
+            Console.WriteLine(end - start);
             Console.WriteLine(" ");
             Console.WriteLine();
             Console.WriteLine("Postorder Traversal : ");
+            start = DateTime.Now;
             theTree.Postorder(theTree.ReturnRoot());
+            end = DateTime.Now;
+            Console.WriteLine(end - start);
             Console.WriteLine(" ");
             Console.WriteLine(" ");
             theTree.print(theTree.ReturnRoot());
