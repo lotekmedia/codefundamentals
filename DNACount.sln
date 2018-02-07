@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNACount", "DNACount.csproj", "{844A1975-DA36-46AC-B0FE-649837D65F1F}"
 EndProject
@@ -18,6 +18,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleSB", "ConsoleSB\ConsoleSB.csproj", "{D38C1777-5355-49FF-BBAA-70D64E0CDAD1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickSort", "QuickSort\QuickSort.csproj", "{D5F7F4FD-A961-47D7-8603-DBEACA33DF07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MissingNumbers", "MissingNumbers\MissingNumbers\MissingNumbers.csproj", "{EF5E550F-B393-4D69-9C0B-985532B379C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,8 +59,15 @@ Global
 		{D5F7F4FD-A961-47D7-8603-DBEACA33DF07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5F7F4FD-A961-47D7-8603-DBEACA33DF07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5F7F4FD-A961-47D7-8603-DBEACA33DF07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF5E550F-B393-4D69-9C0B-985532B379C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF5E550F-B393-4D69-9C0B-985532B379C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF5E550F-B393-4D69-9C0B-985532B379C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF5E550F-B393-4D69-9C0B-985532B379C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {019CF230-EDD2-4C5F-AB52-4972C371FB72}
 	EndGlobalSection
 EndGlobal

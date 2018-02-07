@@ -3,20 +3,6 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace TreeTests
-{
-    [TestClass]
-    public class TestTree
-    {
-
-        [TestMethod]
-        public void InOrderTest()
-        {
-            
-        }
-    }
-}
-
 namespace TreeSort
 {
     public class Trade
@@ -25,7 +11,7 @@ namespace TreeSort
         public int Price;
     }
 
-    class Node
+    public class Node
     {
         public Trade item;
         public Node leftc;
@@ -44,7 +30,7 @@ namespace TreeSort
         }
     }
 
-    class Tree
+    public class Tree
     {
         public Node root;
         public Tree()
