@@ -1,0 +1,5 @@
+{
+	"python.formatting.provider": "yapf",
+	"editor.useTabStops": false,
+	"editor.detectIndentation": false
+}
