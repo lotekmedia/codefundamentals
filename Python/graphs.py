@@ -55,6 +55,20 @@ class Graph():
                 if newpath: return newpath
         return None
 
+    def find_all_paths(self, start, end, path=[]):
+        path = path + [start]
+        if start == end:
+            return [path]
+        if start not in self.graph:
+            return []
+        paths = []
+        for node in self.graph[start]:
+            if node not in path:
+                newpaths = self.find_all_paths(node, end, path)
+                for newpath in newpaths:
+                    paths.append(newpath)
+        return paths
+
 
 g = Graph()
 g.addEdge('A', 'E')
@@ -71,3 +85,5 @@ else:
     print('There is NOT a cycle')
 
 print(g.find_path('A', 'D', []))
+
+print(g.find_all_paths('A', 'D', []))
