@@ -27,4 +27,4 @@ def binCount(dec):
 
 if __name__ == '__main__':
     n = int(input().strip())
-    decimal_to_binary(n)
+    binCount(n)
